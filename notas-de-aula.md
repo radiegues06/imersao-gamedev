@@ -22,3 +22,28 @@ Desenvolver um jogo 2D da categoria *endless runner game*, inspirado em um visua
 * [Duke Nukem](https://www.youtube.com/watch?v=4rSGPiNqbg0) (1996)
 * [Quake](https://www.youtube.com/watch?v=ZHT2TgMX7Rg) (1996)
 * [Minecraft](https://www.youtube.com/watch?v=91kxRGeg9wQ) com [Ray Tracing](https://pt.wikipedia.org/wiki/Ray_tracing) (2019)
+
+# Aula 1
+
+## Funcionamento do p5
+Usa o canvas para criar um *background*. É possível criar um canvas com o tamanho da tela do usuário: `createCanvas(windowWidth, windowHeight);` .
+
+Plano cartesiano do canvas (Fluxo natural da Web):
+* **Origem**: canto superior esquerdo.
+* **Eixo-x**: crescente da esquerda para a direita.
+* **Eixo-y**: crescente de cima para baixo.
+
+![Eixos](https://usefulangle.com/img/posts/18-graph.jpg)
+
+* Função **setup**: executada uma vez, inicialmente, antes do jogo iniciar.
+* Função **draw**: chamada constantemente durante a execução do jogo.
+
+## Funções
+`loadImage`
+`image` - posição na tela, tamanho na tela, posição na imagem, tamanho na imagem.
+
+## Tarefas
+- [ ] Animar o plano de fundo
+- [ ] Animar personagem, mapeando sprite
+- [ ] Inserir música de fundo
+- [ ] Criar classes e organizar arquivos

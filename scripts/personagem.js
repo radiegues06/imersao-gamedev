@@ -28,14 +28,14 @@ class Personagem {
 
     animate() {
         image(this.image, this.screen.x, this.screen.y, this.screen.width, this.screen.height,
-            this.sprite.row * this.sprite.cell.width, this.sprite.column * this.sprite.cell.height,
+            this.sprite.column * this.sprite.cell.width, this.sprite.row * this.sprite.cell.height,
             this.sprite.cell.width, this.sprite.cell.height);
         this.nextFrame();
     }
 
     nextFrame() {
-        this.frame < this.sprite.totalFrames - 1 ? this.frame++ : this.frame = 0;
-        this.sprite.row = this.frame % this.sprite.nRow;
-        this.sprite.column = floor((this.frame) / this.sprite.nColumn);
+        this.frame = (this.frame + 1) % this.sprite.totalFrames;
+        this.sprite.row = floor((this.frame) / this.sprite.nColumn);
+        this.sprite.column = this.frame % this.sprite.nRow;
     }
 }

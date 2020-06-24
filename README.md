@@ -9,7 +9,10 @@ Para acessar o jogo, clique [aqui](https://radiegues06.github.io/imersao-gamedev
 
 Referência na criação de jogos: [John Carmack](https://pt.wikipedia.org/wiki/John_Carmack).
 
-Site de spriters : [The Spriters Resource](https://www.spriters-resource.com/)
+Site de spriters : 
+* [The Spriters Resource](https://www.spriters-resource.com/)
+* [itch.io](https://itch.io/)
+* [OpenGameArt](https://opengameart.org/)
 
 Referência: [Aula Inicial da Alura](https://www.youtube.com/watch?v=NAGb_i94UYo)
 

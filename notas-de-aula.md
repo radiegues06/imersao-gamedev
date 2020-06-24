@@ -22,3 +22,34 @@ Plano cartesiano do canvas (Fluxo natural da Web):
 - [x] Animar personagem, mapeando sprite
 - [ ] Inserir música de fundo
 - [x] Criar classes e organizar arquivos
+
+# Aula 2
+
+*Nota sobre operadores:*
+Se houver uma variável que deva ficar limitada a algum valor, em um loop, é possível utilizar a operação de *remainder*.
+Exemplo: `x = (x + 1) % max;`. A variável `x` terá valores de 0 a `max`.
+
+## Organização e arquitetura
+* Criar classe de inimigo herdando da classe de personagem
+* Essa classe de inimigo possui o método `mover()`, para deslocar o inimigo no eixo x.
+* **Gravidade**: definir um valor base, valor para a gravidade (aceleração) e ir adicionando à velocidade do objeto
+    * Chamar a função que aplica a gravidade dentro do gameLoop
+    * Setar uma velocidade inicial para o pulo, seguindo a função da parábola
+* Colisões (Funções da biblioteca [p5.collide2D](https://github.com/bmoren/p5.collide2D))
+    * Verificar colisões com referência na personagem
+    * Precisão do *hit box*
+* `noLoop()`: encerrar o gameLoop
+
+
+## Eventos
+* `keyPressed`: função observable de eventos e entradas do teclado, obtendo um `keyCode` correspondente à tecla pressionada
+
+## Tarefas
+- [ ] Inimigos
+- [ ] Gravidade
+- [ ] Colisões
+- [ ] Dois cenários diferentes com paralaxe, usando transparências
+- [ ] Limitar número máximo de pulos em 2
+- [ ] Som do pulo
+- [ ] Elementos extras que passem e não colidam com o personagem
+- [ ] Mensagem de *Game over*

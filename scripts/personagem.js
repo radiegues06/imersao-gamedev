@@ -5,8 +5,8 @@ class Personagem {
         this.frame = 0;
 
         this.screen = {
-            x: .05 * windowWidth,
-            y: windowHeight - 1.1 * screenHeight,
+            x: .07 * windowWidth,
+            y: windowHeight - 1.05 * screenHeight,
             width: screenWidth,
             height: screenHeight
         }
@@ -35,7 +35,7 @@ class Personagem {
 
     nextFrame() {
         this.frame < this.sprite.totalFrames - 1 ? this.frame++ : this.frame = 0;
-        this.sprite.row = floor((this.frame) / this.sprite.nRow);
-        this.sprite.column = this.frame % this.sprite.nColumn;
+        this.sprite.row = this.frame % this.sprite.nRow;
+        this.sprite.column = floor((this.frame) / this.sprite.nColumn);
     }
 }

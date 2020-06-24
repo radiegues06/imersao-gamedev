@@ -3,6 +3,8 @@ Jogo em JavaScript, inspirado pela Alura
 
 Anotações e notas de aula disponíveis [aqui](https://github.com/radiegues06/imersao-gamedev/blob/master/notas-de-aula.md).
 
+Para acessar o jogo, clique [aqui](https://radiegues06.github.io/imersao-gamedev/).
+
 # Introdução
 
 Referência na criação de jogos: [John Carmack](https://pt.wikipedia.org/wiki/John_Carmack).

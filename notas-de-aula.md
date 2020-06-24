@@ -18,7 +18,7 @@ Plano cartesiano do canvas (Fluxo natural da Web):
 `image` - posição na tela, tamanho na tela, posição na imagem, tamanho na imagem.
 
 ## Tarefas
-- [ ] Animar o plano de fundo
-- [ ] Animar personagem, mapeando sprite
+- [x] Animar o plano de fundo
+- [x] Animar personagem, mapeando sprite
 - [ ] Inserir música de fundo
-- [ ] Criar classes e organizar arquivos
+- [x] Criar classes e organizar arquivos

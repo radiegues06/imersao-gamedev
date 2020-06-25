@@ -53,3 +53,20 @@ Exemplo: `x = (x + 1) % max;`. A variável `x` terá valores de 0 a `max`.
 - [x] Som do pulo
 - [ ] Elementos extras que passem e não colidam com o personagem
 - [ ] Mensagem de *Game over*
+
+# Aula 3
+
+## Pontuação
+* Classe para armazenar a pontuação do usuário
+* `Text()` do *p5*
+* Ideia: colocar pontuação baseada no tempo e um bônus quando passa por um inimigo
+
+## Game over
+* Inserir imagem de *Game over*
+
+## Controle de pulos
+* Variável de pulo que é incrementada quando chama a função pulo
+
+## Tarefas
+- [ ] Tela inicial do jogo
+- [ ] Moedinha mágica

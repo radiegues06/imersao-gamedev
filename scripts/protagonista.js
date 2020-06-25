@@ -3,11 +3,16 @@ class Protagonista extends Personagem {
         super(sprite, screen);
         this.velocidade = 0;
         this.velocidadeDoPulo = -30;
+        this.pulos = 0;
     }
 
     pular() {
-        this.velocidade = this.velocidadeDoPulo;
-        // somDoPulo.play();
+        if (this.pulos < 2) {
+            this.velocidade = this.velocidadeDoPulo;
+            this.pulos++;
+            // somDoPulo.play();
+        }
+
     }
 
     aplicarGravidade() {
@@ -15,6 +20,7 @@ class Protagonista extends Personagem {
         this.velocidade += GRAVIDADE;
         if (this.screen.y > this.screen.yInitial) {
             this.screen.y = this.screen.yInitial;
+            this.pulos = 0;
         }
     }
 

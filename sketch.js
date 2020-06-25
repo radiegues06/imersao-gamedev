@@ -26,6 +26,9 @@ function preload() {
     );
 
     inimigos.push(inimigosFactory());
+    inimigos.push(inimigosFactory());
+    inimigos.push(inimigosFactory());
+    inimigos.push(inimigosFactory());
 }
 
 function inimigosFactory(i = floor(Math.random() * 3)) {

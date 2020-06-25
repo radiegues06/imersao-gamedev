@@ -45,7 +45,7 @@ Exemplo: `x = (x + 1) % max;`. A variável `x` terá valores de 0 a `max`.
 * `keyPressed`: função observable de eventos e entradas do teclado, obtendo um `keyCode` correspondente à tecla pressionada
 
 ## Tarefas
-- [ ] Inimigos
+- [x] Inimigos
 - [ ] Gravidade
 - [ ] Colisões
 - [x] Dois cenários diferentes com paralaxe, usando transparências

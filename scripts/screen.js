@@ -1,12 +1,9 @@
 class Screen {
-    constructor(width, height, x, y) {
-
-        this.width = width;
-        this.height = height;
+    constructor(factor, x, y) {
+        this.factor = factor;
         this.x = x;
         this.y = y;
         this.frame = 0;
-
     }
 
 }

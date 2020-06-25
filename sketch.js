@@ -8,6 +8,8 @@ const GRAVIDADE = 2;
 const CEU = 0.5 * window.innerHeight;
 const CHAO = 0.02 * window.innerHeight;
 
+let colisao = false;
+
 function preload() {
     somDoPulo = loadSound("assets/sons/somPulo.mp3");
     backgroundImages[0] = new Fundo("assets/imagens/cenario/Sky.png", 0);
@@ -63,5 +65,8 @@ function draw() {
     inimigos.forEach(inimigo => {
         inimigo.animate();
         inimigo.andar();
+        colisao = protagonista.checarColisao(inimigo);
     })
+
+    if (colisao) { noLoop(); }
 }

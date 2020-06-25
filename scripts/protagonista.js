@@ -17,4 +17,9 @@ class Protagonista extends Personagem {
             this.screen.y = this.screen.yInitial;
         }
     }
+
+    checarColisao(inimigo) {
+        return collideRectRect(this.screen.x, this.screen.y, this.screen.width, this.screen.height,
+            inimigo.screen.x, inimigo.screen.y, inimigo.screen.width, inimigo.screen.height);
+    }
 }

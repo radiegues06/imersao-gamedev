@@ -47,7 +47,7 @@ Exemplo: `x = (x + 1) % max;`. A variável `x` terá valores de 0 a `max`.
 ## Tarefas
 - [x] Inimigos
 - [x] Gravidade
-- [ ] Colisões
+- [x] Colisões
 - [x] Dois cenários diferentes com paralaxe, usando transparências
 - [ ] Limitar número máximo de pulos em 2
 - [x] Som do pulo

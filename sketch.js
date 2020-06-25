@@ -1,12 +1,13 @@
 let backgroundImages = [];
 let protagonista;
+let somDoPulo;
 
 const GRAVIDADE = 2;
 const CEU = 0.5 * window.innerHeight;
 const CHAO = 0.02 * window.innerHeight;
 
 function preload() {
-
+    somDoPulo = loadSound("assets/sons/somPulo.mp3");
     backgroundImages[0] = new Fundo("assets/imagens/cenario/Sky.png", 0);
     backgroundImages[1] = new Fundo("assets/imagens/cenario/BG_Decor.png", 2);
     backgroundImages[2] = new Fundo("assets/imagens/cenario/Middle_Decor.png", 5);

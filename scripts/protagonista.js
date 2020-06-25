@@ -7,6 +7,7 @@ class Protagonista extends Personagem {
 
     pular() {
         this.velocidade = this.velocidadeDoPulo;
+        // somDoPulo.play();
     }
 
     aplicarGravidade() {

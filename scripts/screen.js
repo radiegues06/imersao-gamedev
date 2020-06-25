@@ -1,8 +1,8 @@
 class Screen {
-    constructor(factor, x, y) {
+    constructor(factor, x, yRef) {
         this.factor = factor;
         this.x = x;
-        this.y = y;
+        this.yRef = yRef;
         this.frame = 0;
     }
 

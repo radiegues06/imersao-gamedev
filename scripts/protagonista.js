@@ -25,6 +25,9 @@ class Protagonista extends Personagem {
     }
 
     checarColisao(inimigo) {
+        // noFill();
+        // rect(this.screen.x, this.screen.y, this.screen.width, this.screen.height);
+        // TODO melhorar hit box
         return collideRectRect(this.screen.x, this.screen.y, this.screen.width, this.screen.height,
             inimigo.screen.x, inimigo.screen.y, inimigo.screen.width, inimigo.screen.height);
     }

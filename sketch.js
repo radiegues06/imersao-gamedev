@@ -1,4 +1,5 @@
 let backgroundImages = [];
+let gameOverImage;
 let protagonista;
 let somDoPulo;
 
@@ -19,6 +20,8 @@ function preload() {
     backgroundImages[2] = new Fundo("assets/imagens/cenario/Middle_Decor.png", 5);
     backgroundImages[3] = new Fundo("assets/imagens/cenario/Foreground.png", 10);
     backgroundImages[4] = new Fundo("assets/imagens/cenario/Ground.png", 18);
+
+    gameOverImage = loadImage("assets/imagens/assets/game-over.png");
 
     protagonista = new Protagonista(
         new Sprite("assets/imagens/personagem/correndo.png", 880, 1080, 4, 4),
@@ -71,10 +74,13 @@ function draw() {
     protagonista.animate();
 
     inimigos.forEach(inimigo => {
+        colisao = protagonista.checarColisao(inimigo);
         inimigo.animate();
         inimigo.andar();
-        colisao = protagonista.checarColisao(inimigo);
     })
 
-    if (colisao) { noLoop(); }
+    if (colisao) {
+        image(gameOverImage, windowWidth / 2 - 412, windowHeight / 3, 412 * 2, 78 * 2)
+        noLoop();
+    }
 }

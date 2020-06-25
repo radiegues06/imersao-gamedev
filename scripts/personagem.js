@@ -17,8 +17,6 @@ class Personagem {
             this.sprite.row * this.sprite.cell.height + this.sprite.verticalCrop,
             this.sprite.crop.width,
             this.sprite.crop.height);
-        noFill();
-        rect(this.screen.x, this.screen.y, this.screen.width, this.screen.height);
         this.nextFrame();
     }
 

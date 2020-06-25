@@ -4,7 +4,9 @@ class Personagem {
         this.screen = screen;
         this.screen.width = this.screen.factor * this.sprite.crop.width;
         this.screen.height = this.screen.factor * this.sprite.crop.height;
+        this.screen.xInitial = this.screen.xRef + this.screen.width;
         this.screen.yInitial = windowHeight - (this.screen.height + this.screen.yRef);
+        this.screen.x = this.screen.xInitial;
         this.screen.y = this.screen.yInitial;
     }
 

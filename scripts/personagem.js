@@ -15,6 +15,6 @@ class Personagem {
     nextFrame() {
         this.screen.frame = (this.screen.frame + 1) % this.sprite.totalFrames;
         this.sprite.row = floor((this.screen.frame) / this.sprite.nColumn);
-        this.sprite.column = this.screen.frame % this.sprite.nRow;
+        this.sprite.column = this.screen.frame % this.sprite.nColumn;
     }
 }

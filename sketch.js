@@ -1,7 +1,7 @@
 let backgroundImages = [];
 let protagonista;
 
-const GRAVIDADE = 10;
+const GRAVIDADE = 2;
 const CEU = 0.5 * window.innerHeight;
 const CHAO = 0.02 * window.innerHeight;
 
@@ -40,13 +40,14 @@ function setup() {
 }
 
 function keyPressed() {
-    if (keyCode === 32) {
+    if (keyCode === 32 || keyCode == 38) {
         protagonista.pular();
     }
 }
 
 function draw() {
     backgroundImages.forEach(element => element.drawFundo());
+    protagonista.aplicarGravidade();
     protagonista.animate();
     inimigoPequeno.animate();
     inimigoPequeno.andar();

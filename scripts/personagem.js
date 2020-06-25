@@ -2,9 +2,10 @@ class Personagem {
     constructor(sprite, screen) {
         this.sprite = sprite;
         this.screen = screen;
-        this.screen.y = windowHeight - (this.screen.factor * this.sprite.crop.height + this.screen.yRef);
         this.screen.width = this.screen.factor * this.sprite.crop.width;
         this.screen.height = this.screen.factor * this.sprite.crop.height;
+        this.screen.yInitial = windowHeight - (this.screen.height + this.screen.yRef);
+        this.screen.y = this.screen.yInitial;
     }
 
     animate() {
@@ -15,7 +16,7 @@ class Personagem {
             this.sprite.crop.width,
             this.sprite.crop.height);
         noFill();
-        rect(this.screen.x, this.screen.y, this.screen.factor * this.sprite.crop.width, this.screen.factor * this.sprite.crop.height);
+        rect(this.screen.x, this.screen.y, this.screen.width, this.screen.height);
         this.nextFrame();
     }
 

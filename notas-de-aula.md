@@ -69,7 +69,7 @@ Exemplo: `x = (x + 1) % max;`. A variável `x` terá valores de 0 a `max`.
 
 ## Tarefas
 - [x] Pontuação do jogo
-- [ ] Tela inicial do jogo
+- [x] Tela inicial do jogo
 - [ ] Moedinha mágica
 
 # Aula 4

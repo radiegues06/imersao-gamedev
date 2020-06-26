@@ -1,5 +1,6 @@
 let backgroundImages = [];
 let gameOverImage;
+let telaInicialImage;
 let protagonista;
 let somBonus;
 let somDoPulo;
@@ -23,6 +24,8 @@ function preload() {
     backgroundImages[2] = new Fundo("assets/imagens/cenario/Middle_Decor.png", 5);
     backgroundImages[3] = new Fundo("assets/imagens/cenario/Foreground.png", 10);
     backgroundImages[4] = new Fundo("assets/imagens/cenario/Ground.png", 18);
+
+    telaInicialImage = loadImage("assets/imagens/assets/telaInicial.png");
 
     gameOverImage = loadImage("assets/imagens/assets/game-over.png");
 

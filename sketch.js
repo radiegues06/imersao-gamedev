@@ -46,18 +46,20 @@ function gameOver() {
 }
 
 function telaInicial() {
-
+    image(telaInicialImage, 0, 0, windowWidth, windowHeight);
+    textSize(50);
+    textAlign(CENTER, CENTER);
+    fill(0, 0, 0);
+    text('Aperte ENTER ou ESPAÇO para iniciar o jogo.', windowWidth / 2, windowHeight / 2);
 }
 
 function keyPressed() {
 
     if (SCENE === 0) {
-        if (keyCode === 13) {
+        if (keyCode === 13 || keyCode === 32) {
             SCENE = 1;
         }
-    }
-
-    if (SCENE === 1) {
+    } else if (SCENE === 1) {
         if (keyCode === 32 || keyCode == 38) {
             protagonista.pular();
         }

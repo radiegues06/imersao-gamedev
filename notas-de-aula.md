@@ -68,7 +68,7 @@ Exemplo: `x = (x + 1) % max;`. A variável `x` terá valores de 0 a `max`.
 * Variável de pulo que é incrementada quando chama a função pulo
 
 ## Tarefas
-- [ ] Pontuação do jogo
+- [x] Pontuação do jogo
 - [ ] Tela inicial do jogo
 - [ ] Moedinha mágica
 

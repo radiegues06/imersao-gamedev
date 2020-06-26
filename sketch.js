@@ -1,8 +1,10 @@
 let backgroundImages = [];
 let gameOverImage;
 let protagonista;
+let somBonus;
 let somDoPulo;
 
+let FRAME_RATE = 30;
 let inimigos = [];
 
 const GRAVIDADE = 2;
@@ -15,6 +17,7 @@ let colisao = false;
 
 function preload() {
     somDoPulo = loadSound("assets/sons/somPulo.mp3");
+    somBonus = loadSound("assets/sons/bonus.wav");
     backgroundImages[0] = new Fundo("assets/imagens/cenario/Sky.png", 0);
     backgroundImages[1] = new Fundo("assets/imagens/cenario/BG_Decor.png", 2);
     backgroundImages[2] = new Fundo("assets/imagens/cenario/Middle_Decor.png", 5);
@@ -28,10 +31,56 @@ function preload() {
         new Screen(0.5, DIREITA, CHAO)
     );
 
+    pontuacao = new Pontuacao();
+
     inimigos.push(inimigosFactory());
     inimigos.push(inimigosFactory());
     inimigos.push(inimigosFactory());
     inimigos.push(inimigosFactory());
+}
+
+
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+    frameRate(FRAME_RATE);
+}
+
+function draw() {
+
+    backgroundImages.forEach(element => element.drawFundo());
+
+    protagonista.aplicarGravidade();
+    protagonista.animate();
+
+    inimigos.forEach(inimigo => {
+        colisao = protagonista.checarColisao(inimigo);
+        inimigo.animate();
+        inimigo.andar();
+
+        if (colisao) {
+            finishGame();
+        }
+
+        if (inimigo.checkPassouProtagonista() & inimigo.jaDeuBonus === false) {
+            inimigo.jaDeuBonus = true;
+            somBonus.play();
+            pontuacao.addBonus();
+        }
+    })
+
+    pontuacao.atualizaPontuacao();
+
+}
+
+function keyPressed() {
+    if (keyCode === 32 || keyCode == 38) {
+        protagonista.pular();
+    }
+}
+
+function finishGame() {
+    image(gameOverImage, windowWidth / 2 - 412, windowHeight / 3, 412 * 2, 78 * 2);
+    noLoop();
 }
 
 function inimigosFactory(i = floor(Math.random() * 3)) {
@@ -53,36 +102,4 @@ function inimigosFactory(i = floor(Math.random() * 3)) {
             new Screen(0.5, ESQUERDA, CEU),
             12);
     }
-}
-
-
-function setup() {
-    createCanvas(windowWidth, windowHeight);
-    frameRate(30);
-}
-
-function keyPressed() {
-    if (keyCode === 32 || keyCode == 38) {
-        protagonista.pular();
-    }
-}
-
-function draw() {
-    backgroundImages.forEach(element => element.drawFundo());
-
-    protagonista.aplicarGravidade();
-    protagonista.animate();
-
-    inimigos.forEach(inimigo => {
-        colisao = protagonista.checarColisao(inimigo);
-        inimigo.animate();
-        inimigo.andar();
-
-        if (colisao) {
-            image(gameOverImage, windowWidth / 2 - 412, windowHeight / 3, 412 * 2, 78 * 2)
-            noLoop();
-        }
-    })
-
-
 }

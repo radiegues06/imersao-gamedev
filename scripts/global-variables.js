@@ -2,7 +2,7 @@ let backgroundImages = [];
 let telaInicialImage;
 let gameOverImage;
 
-let fonteTelaInicial;
+let fonteJogo;
 
 let protagonista;
 let inimigos = [];
@@ -14,7 +14,7 @@ let FRAME_RATE = 30;
 let SCENE = 0;
 
 const GRAVIDADE = 1.5;
-const DIREITA = 0.02 * window.innerWidth;
+const DIREITA = 0.04 * window.innerWidth;
 const ESQUERDA = window.innerWidth;
 const CEU = 0.5 * window.innerHeight;
 const CHAO = 0.02 * window.innerHeight;
@@ -24,7 +24,7 @@ function preload() {
     somBonus = loadSound("assets/sons/bonus.wav");
 
     telaInicialImage = loadImage("assets/imagens/assets/telaInicial.png");
-    fonteTelaInicial = loadFont("assets/imagens/assets/fonteTelaInicial.otf");
+    fonteJogo = loadFont("assets/imagens/assets/fonteTelaInicial.otf");
 
     backgroundImages[0] = new Fundo("assets/imagens/cenario/Sky.png", 0);
     backgroundImages[1] = new Fundo("assets/imagens/cenario/BG_Decor.png", 2);

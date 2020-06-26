@@ -53,7 +53,7 @@ function telaInicial() {
     textAlign(CENTER, CENTER);
     fill(0, 0, 0);
     textSize(60);
-    textFont(fonteTelaInicial);
+    textFont(fonteJogo);
     text('As aventuras de', windowWidth / 2, windowHeight * 0.3);
     textSize(100);
     text('Hypsta', windowWidth / 2, windowHeight * 0.45);

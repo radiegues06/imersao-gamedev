@@ -17,14 +17,16 @@ class Pontuacao {
 
     addBonus() {
         this.bonusAtual = this.bonus;
-        this.showBonusCounter = 10;
+        this.showBonusCounter = 12;
     }
 
     showPontuacao() {
-        textSize(60);
-        textAlign(RIGHT, CENTER);
+        let padding = 15;
+        textSize(70);
+        textAlign(RIGHT, TOP);
+        textFont(fonteJogo);
         fill(255, 255, 255);
-        text(parseInt(this.pontos), windowWidth - 100, 30, 100, 100);
+        text(parseInt(this.pontos), padding, padding, 100, 100);
         pontuacao.showBonus();
     }
 
@@ -34,9 +36,9 @@ class Pontuacao {
             this.bonusAtual = 0;
             textSize(60);
             textAlign(RIGHT, CENTER);
-
+            textFont(fonteJogo);
             fill(255, 255, 25);
-            text(`+${this.bonus}`, 150, 0.25 * windowHeight, 100, 100);
+            text(`+${this.bonus}`, protagonista.screen.x, 0.2 * windowHeight + this.showBonusCounter * 2, 100, 100);
         }
 
     }

@@ -80,4 +80,4 @@ Exemplo: `x = (x + 1) % max;`. A variável `x` terá valores de 0 a `max`.
 * Arquivo de variáveis e constantes globais
 * Classe de jogo, com seus próprios métodos de `draw`, `setup`, etc.
     * *Sketch* atuando como gerenciador de estados do jogo
-* 
+* Inserir elementos de HTML usando a biblioteca *p5.js*

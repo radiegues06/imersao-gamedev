@@ -81,3 +81,10 @@ Exemplo: `x = (x + 1) % max;`. A variável `x` terá valores de 0 a `max`.
 * Classe de jogo, com seus próprios métodos de `draw`, `setup`, etc.
     * *Sketch* atuando como gerenciador de estados do jogo
 * Inserir elementos de HTML usando a biblioteca *p5.js*
+
+## Tarefas
+* É possível criar uma história usando as funções para adicionar HTML e CSS no Canvas
+
+- [ ] Criar histórias
+- [ ] Cenas intermediárias
+- [ ] Página de Game Over poder reiniciar o jogo

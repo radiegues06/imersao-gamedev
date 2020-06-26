@@ -77,10 +77,12 @@ function draw() {
         colisao = protagonista.checarColisao(inimigo);
         inimigo.animate();
         inimigo.andar();
+
+        if (colisao) {
+            image(gameOverImage, windowWidth / 2 - 412, windowHeight / 3, 412 * 2, 78 * 2)
+            noLoop();
+        }
     })
 
-    if (colisao) {
-        image(gameOverImage, windowWidth / 2 - 412, windowHeight / 3, 412 * 2, 78 * 2)
-        noLoop();
-    }
+
 }

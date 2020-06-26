@@ -25,10 +25,17 @@ class Protagonista extends Personagem {
     }
 
     checarColisao(inimigo) {
+        const toleranciaColisao = 0.25;
+
         // noFill();
-        // rect(this.screen.x, this.screen.y, this.screen.width, this.screen.height);
-        // TODO melhorar hit box
-        return collideRectRect(this.screen.x, this.screen.y, this.screen.width, this.screen.height,
-            inimigo.screen.x, inimigo.screen.y, inimigo.screen.width, inimigo.screen.height);
+        // rect(this.screen.x + toleranciaColisao * this.screen.width / 2, this.screen.y + toleranciaColisao * this.screen.height / 2,
+        //     (1 - toleranciaColisao) * this.screen.width, (1 - toleranciaColisao) * this.screen.height);
+        // rect(inimigo.screen.x + toleranciaColisao * inimigo.screen.width / 2, inimigo.screen.y + toleranciaColisao * inimigo.screen.height / 2,
+        //     (1 - toleranciaColisao) * inimigo.screen.width, (1 - toleranciaColisao) * inimigo.screen.height);
+
+        return collideRectRect(this.screen.x + toleranciaColisao * this.screen.width / 2, this.screen.y + toleranciaColisao * this.screen.height / 2,
+            (1 - toleranciaColisao) * this.screen.width, (1 - toleranciaColisao) * this.screen.height,
+            inimigo.screen.x + toleranciaColisao * inimigo.screen.width / 2, inimigo.screen.y + toleranciaColisao * inimigo.screen.height / 2,
+            (1 - toleranciaColisao) * inimigo.screen.width, (1 - toleranciaColisao) * inimigo.screen.height);
     }
 }

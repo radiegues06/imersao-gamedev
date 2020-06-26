@@ -68,5 +68,13 @@ Exemplo: `x = (x + 1) % max;`. A variável `x` terá valores de 0 a `max`.
 * Variável de pulo que é incrementada quando chama a função pulo
 
 ## Tarefas
+- [ ] Pontuação do jogo
 - [ ] Tela inicial do jogo
 - [ ] Moedinha mágica
+
+# Aula 4
+
+* Controle do fluxo de inimigos na tela
+* Ideia: ter uma distância base entre inimigos mais uma distância aleatória. Ex: dist = x + rand()
+    * Esses valores de distância, rand e velocidade podem ir aumentando para dificultar o jogo
+* Arquivo de variáveis e constantes globais

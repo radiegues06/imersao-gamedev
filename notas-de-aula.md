@@ -78,3 +78,4 @@ Exemplo: `x = (x + 1) % max;`. A variável `x` terá valores de 0 a `max`.
 * Ideia: ter uma distância base entre inimigos mais uma distância aleatória. Ex: dist = x + rand()
     * Esses valores de distância, rand e velocidade podem ir aumentando para dificultar o jogo
 * Arquivo de variáveis e constantes globais
+* Classe de jogo, com seus próprios métodos de `draw`, `setup`, etc.

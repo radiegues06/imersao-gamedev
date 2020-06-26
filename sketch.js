@@ -1,69 +1,37 @@
-let backgroundImages = [];
-let gameOverImage;
-let protagonista;
-let somBonus;
-let somDoPulo;
-
-let FRAME_RATE = 30;
-let inimigos = [];
-
-const GRAVIDADE = 2;
-const DIREITA = 0.02 * window.innerWidth;
-const ESQUERDA = window.innerWidth;
-const CEU = 0.5 * window.innerHeight;
-const CHAO = 0.02 * window.innerHeight;
-
-let colisao = false;
-
-function preload() {
-    somDoPulo = loadSound("assets/sons/somPulo.mp3");
-    somBonus = loadSound("assets/sons/bonus.wav");
-    backgroundImages[0] = new Fundo("assets/imagens/cenario/Sky.png", 0);
-    backgroundImages[1] = new Fundo("assets/imagens/cenario/BG_Decor.png", 2);
-    backgroundImages[2] = new Fundo("assets/imagens/cenario/Middle_Decor.png", 5);
-    backgroundImages[3] = new Fundo("assets/imagens/cenario/Foreground.png", 10);
-    backgroundImages[4] = new Fundo("assets/imagens/cenario/Ground.png", 18);
-
-    gameOverImage = loadImage("assets/imagens/assets/game-over.png");
-
-    protagonista = new Protagonista(
-        new Sprite("assets/imagens/personagem/correndo.png", 880, 1080, 4, 4),
-        new Screen(0.5, DIREITA, CHAO)
-    );
-
-    pontuacao = new Pontuacao();
-
-    inimigos.push(inimigosFactory());
-    inimigos.push(inimigosFactory());
-    inimigos.push(inimigosFactory());
-    inimigos.push(inimigosFactory());
-}
-
-
 function setup() {
     createCanvas(windowWidth, windowHeight);
     frameRate(FRAME_RATE);
 }
 
 function draw() {
+    if (SCENE == 0) {
+        telaInicial();
+    }
+    if (SCENE == 1) {
+        gameOn();
+    }
+    if (SCENE == 2) {
+        gameOver();
+    }
+}
 
+function gameOn() {
     backgroundImages.forEach(element => element.drawFundo());
 
     protagonista.aplicarGravidade();
     protagonista.animate();
 
     inimigos.forEach(inimigo => {
-        colisao = protagonista.checarColisao(inimigo);
         inimigo.animate();
         inimigo.andar();
 
-        if (colisao) {
-            finishGame();
+        if (protagonista.checarColisao(inimigo)) {
+            SCENE = 2;
         }
 
         if (inimigo.checkPassouProtagonista() & inimigo.jaDeuBonus === false) {
             inimigo.jaDeuBonus = true;
-            somBonus.play();
+            // somBonus.play();
             pontuacao.addBonus();
         }
     })
@@ -72,15 +40,29 @@ function draw() {
 
 }
 
-function keyPressed() {
-    if (keyCode === 32 || keyCode == 38) {
-        protagonista.pular();
-    }
-}
-
-function finishGame() {
+function gameOver() {
     image(gameOverImage, windowWidth / 2 - 412, windowHeight / 3, 412 * 2, 78 * 2);
     noLoop();
+}
+
+function telaInicial() {
+
+}
+
+function keyPressed() {
+
+    if (SCENE === 0) {
+        if (keyCode === 13) {
+            SCENE = 1;
+        }
+    }
+
+    if (SCENE === 1) {
+        if (keyCode === 32 || keyCode == 38) {
+            protagonista.pular();
+        }
+    }
+
 }
 
 function inimigosFactory(i = floor(Math.random() * 3)) {

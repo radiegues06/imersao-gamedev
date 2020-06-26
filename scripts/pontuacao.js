@@ -7,7 +7,7 @@ class Pontuacao {
     }
 
     atualizaPontuacao() {
-        this.pontos += this.getPontuacaoPorTempo();
+        this.pontos += this.getPontuacaoPorTempo() + this.bonusAtual;
         this.showPontuacao();
     }
 
@@ -30,8 +30,8 @@ class Pontuacao {
 
     showBonus() {
         this.showBonusCounter--;
-
-        if (this.bonusAtual > 0 && this.showBonusCounter > 0) {
+        if (this.showBonusCounter > 0) {
+            this.bonusAtual = 0;
             textSize(60);
             textAlign(RIGHT, CENTER);
 

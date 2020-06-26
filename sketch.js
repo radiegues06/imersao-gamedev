@@ -46,11 +46,26 @@ function gameOver() {
 }
 
 function telaInicial() {
+    const padding = 15;
+
     image(telaInicialImage, 0, 0, windowWidth, windowHeight);
-    textSize(50);
+
     textAlign(CENTER, CENTER);
     fill(0, 0, 0);
-    text('Aperte ENTER ou ESPAÇO para iniciar o jogo.', windowWidth / 2, windowHeight / 2);
+    textSize(60);
+    textFont(fonteTelaInicial);
+    text('As aventuras de', windowWidth / 2, windowHeight * 0.3);
+    textSize(100);
+    text('Hypsta', windowWidth / 2, windowHeight * 0.45);
+
+    textFont('Helvetica');
+    textSize(40);
+    text('Aperte ENTER ou ESPAÇO para iniciar o jogo', windowWidth / 2, windowHeight * 0.7);
+
+    fill(200, 200, 200);
+    textAlign(RIGHT, BOTTOM);
+    textSize(15);
+    text("Desenvolvido por Rafael Amancio Diegues", windowWidth - padding, windowHeight - padding)
 }
 
 function keyPressed() {
@@ -65,25 +80,4 @@ function keyPressed() {
         }
     }
 
-}
-
-function inimigosFactory(i = floor(Math.random() * 3)) {
-    if (i === 0) {
-        return new Inimigo(
-            new Sprite("assets/imagens/inimigos/gotinha.png", 416, 728, 7, 4),
-            new Screen(0.5, ESQUERDA, CHAO),
-            10);
-    }
-    if (i === 1) {
-        return new Inimigo(
-            new Sprite("assets/imagens/inimigos/troll.png", 2000, 2400, 6, 5, 28, 12, 57),
-            new Screen(0.85, ESQUERDA, CHAO),
-            7);
-    }
-    if (i === 2) {
-        return new Inimigo(
-            new Sprite("assets/imagens/inimigos/gotinha-voadora.png", 600, 900, 6, 3, 16, 0, 15),
-            new Screen(0.5, ESQUERDA, CEU),
-            12);
-    }
 }

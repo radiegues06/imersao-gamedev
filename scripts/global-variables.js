@@ -20,6 +20,9 @@ const ESQUERDA = window.innerWidth;
 const CEU = 0.5 * window.innerHeight;
 const CHAO = 0.02 * window.innerHeight;
 
+const SHADOW = 4;
+
+
 function preload() {
     somDoPulo = loadSound("assets/sons/somPulo.mp3");
     somBonus = loadSound("assets/sons/bonus.wav");

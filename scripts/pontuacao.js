@@ -30,8 +30,10 @@ class Pontuacao {
         textSize(70);
         textAlign(RIGHT, TOP);
         textFont(fonteJogo);
+        // Sombra
         fill("rgba(0,0,0, 0.7)");
-        text(parseInt(this.pontos), windowWidth - padding + 3, padding + 3);
+        text(parseInt(this.pontos), windowWidth - padding + SHADOW, padding + SHADOW);
+        // Texto
         fill(255, 255, 255);
         text(parseInt(this.pontos), windowWidth - padding, padding);
         this.showBonus();
@@ -41,9 +43,11 @@ class Pontuacao {
     showMaximaPontuacao() {
         if (this.maximaPontuacao > 0) {
             let padding = 25;
-            textSize(70);
+            textSize(40);
             textAlign(RIGHT, TOP);
             textFont(fonteJogo);
+            fill("rgba(0,0,0, 0.7)");
+            text(`MAX   ${parseInt(this.maximaPontuacao)}`, windowWidth - padding + SHADOW, padding + 100 + SHADOW);
             fill(39, 139, 34);
             text(`MAX   ${parseInt(this.maximaPontuacao)}`, windowWidth - padding, padding + 100);
         }

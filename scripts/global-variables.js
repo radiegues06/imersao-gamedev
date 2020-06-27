@@ -5,7 +5,7 @@ let gameOverImage;
 let fonteJogo;
 
 let protagonista;
-let inimigos = [];
+let inimigos;
 
 let somBonus;
 let somDoPulo;
@@ -34,6 +34,11 @@ function preload() {
 
     gameOverImage = loadImage("assets/imagens/assets/game-over.png");
 
+    createGame();
+}
+
+function createGame() {
+
     protagonista = new Protagonista(
         new Sprite("assets/imagens/personagem/correndo.png", 880, 1080, 4, 4),
         new Screen(0.5, DIREITA, CHAO)
@@ -41,5 +46,6 @@ function preload() {
 
     pontuacao = new Pontuacao();
 
+    inimigos = [];
     inimigos.push(inimigosFactory());
 }

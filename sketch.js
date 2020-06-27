@@ -78,6 +78,12 @@ function keyPressed() {
         if (keyCode === 32 || keyCode == 38) {
             protagonista.pular();
         }
+    } else if (SCENE == 2) {
+        if (keyCode === 13 || keyCode === 32) {
+            createGame();
+            SCENE = 1;
+            loop();
+        }
     }
 
 }

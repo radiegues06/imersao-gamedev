@@ -8,8 +8,8 @@ let protagonista;
 let inimigos;
 const NUMERO_INIMIGOS = 2;
 
-let somBonus;
-let somDoPulo;
+let sons;
+const MUTE = false;
 
 let FRAME_RATE = 30;
 let SCENE = 0;
@@ -22,10 +22,7 @@ const CHAO = 0.02 * window.innerHeight;
 
 const SHADOW = 4;
 
-
 function preload() {
-    somDoPulo = loadSound("assets/sons/somPulo.mp3");
-    somBonus = loadSound("assets/sons/bonus.wav");
 
     telaInicialImage = loadImage("assets/imagens/assets/telaInicial.png");
     fonteJogo = loadFont("assets/imagens/assets/fonteTelaInicial.otf");
@@ -38,10 +35,7 @@ function preload() {
 
     gameOverImage = loadImage("assets/imagens/assets/game-over.png");
 
-    createGame();
-}
-
-function createGame() {
+    sons = new Sons();
 
     protagonista = new Protagonista(
         new Sprite("assets/imagens/personagem/correndo.png", 880, 1080, 4, 4),

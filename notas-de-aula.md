@@ -20,7 +20,7 @@ Plano cartesiano do canvas (Fluxo natural da Web):
 ## Tarefas
 - [x] Animar o plano de fundo
 - [x] Animar personagem, mapeando sprite
-- [ ] Inserir música de fundo
+- [x] Inserir música de fundo
 - [x] Criar classes e organizar arquivos
 
 # Aula 2

@@ -10,7 +10,7 @@ class Protagonista extends Personagem {
         if (this.pulos < 2) {
             this.velocidade = this.velocidadeDoPulo;
             this.pulos++;
-            // somDoPulo.play();
+            sons.playPulo();
         }
 
     }

@@ -14,6 +14,9 @@ Site de spriters :
 * [itch.io](https://itch.io/)
 * [OpenGameArt](https://opengameart.org/)
 
+Site de sons:
+* [freesound](https://freesound.org/)
+
 Referência: [Aula Inicial da Alura](https://www.youtube.com/watch?v=NAGb_i94UYo)
 
 ## Objetivo

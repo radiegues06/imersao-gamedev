@@ -13,9 +13,13 @@ function draw() {
     if (SCENE === 2) {
         gameOver();
     }
+
+    sons.playScene();
 }
 
 function gameOn() {
+
+
     backgroundImages.forEach(element => element.drawFundo());
 
     protagonista.aplicarGravidade();
@@ -27,12 +31,13 @@ function gameOn() {
 
         if (protagonista.checarColisao(inimigo)) {
             SCENE = 2;
+            sons.mudaScene();
         }
 
         if (inimigo.checkPassouProtagonista() & inimigo.jaDeuBonus === false) {
             inimigo.jaDeuBonus = true;
-            // somBonus.play();
             pontuacao.addBonus();
+            sons.playBonus();
         }
     })
 
@@ -46,6 +51,7 @@ function gameOver() {
 }
 
 function telaInicial() {
+
     const padding = 15;
 
     image(telaInicialImage, 0, 0, windowWidth, windowHeight);
@@ -66,6 +72,8 @@ function telaInicial() {
     textAlign(RIGHT, BOTTOM);
     textSize(15);
     text("Desenvolvido por Rafael Amancio Diegues", windowWidth - padding, windowHeight - padding)
+
+    noLoop();
 }
 
 function keyPressed() {
@@ -73,6 +81,8 @@ function keyPressed() {
     if (SCENE === 0) {
         if (keyCode === 13 || keyCode === 32) {
             SCENE = 1;
+            sons.mudaScene();
+            loop();
         }
     } else if (SCENE === 1) {
         if (keyCode === 32 || keyCode == 38) {
@@ -82,6 +92,7 @@ function keyPressed() {
         if (keyCode === 13 || keyCode === 32) {
             resetGame();
             SCENE = 1;
+            sons.mudaScene();
             loop();
         }
     }

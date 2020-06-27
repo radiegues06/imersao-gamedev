@@ -4,11 +4,16 @@ class Pontuacao {
         this.bonus = floor(300 / FRAME_RATE);
         this.bonusAtual = 0;
         this.showBonusCounter = 0;
+        this.maximaPontuacao = 0;
     }
 
     atualizaPontuacao() {
         this.pontos += this.getPontuacaoPorTempo() + this.bonusAtual;
         this.showPontuacao();
+    }
+
+    atualizaMaximaPontuacao() {
+        this.maximaPontuacao = max(this.maximaPontuacao, this.pontos);
     }
 
     getPontuacaoPorTempo() {
@@ -21,13 +26,27 @@ class Pontuacao {
     }
 
     showPontuacao() {
-        let padding = 15;
+        let padding = 25;
         textSize(70);
         textAlign(RIGHT, TOP);
         textFont(fonteJogo);
+        fill("rgba(0,0,0, 0.7)");
+        text(parseInt(this.pontos), windowWidth - padding + 3, padding + 3);
         fill(255, 255, 255);
-        text(parseInt(this.pontos), padding, padding, 100, 100);
-        pontuacao.showBonus();
+        text(parseInt(this.pontos), windowWidth - padding, padding);
+        this.showBonus();
+        this.showMaximaPontuacao();
+    }
+
+    showMaximaPontuacao() {
+        if (this.maximaPontuacao > 0) {
+            let padding = 25;
+            textSize(70);
+            textAlign(RIGHT, TOP);
+            textFont(fonteJogo);
+            fill(39, 139, 34);
+            text(`MAX   ${parseInt(this.maximaPontuacao)}`, windowWidth - padding, padding + 100);
+        }
     }
 
     showBonus() {
@@ -43,4 +62,9 @@ class Pontuacao {
 
     }
 
+    reset() {
+        this.atualizaMaximaPontuacao();
+        this.pontos = 0;
+        this.showBonusCounter = 0;
+    }
 }

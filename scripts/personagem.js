@@ -25,4 +25,10 @@ class Personagem {
         this.sprite.row = floor((this.screen.frame) / this.sprite.nColumn);
         this.sprite.column = this.screen.frame % this.sprite.nColumn;
     }
+
+
+    reset() {
+        this.screen.x = this.screen.xInitial;
+        this.screen.y = this.screen.yInitial;
+    }
 }

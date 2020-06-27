@@ -6,6 +6,7 @@ let fonteJogo;
 
 let protagonista;
 let inimigos;
+const NUMERO_INIMIGOS = 2;
 
 let somBonus;
 let somDoPulo;
@@ -47,5 +48,15 @@ function createGame() {
     pontuacao = new Pontuacao();
 
     inimigos = [];
-    inimigos.push(inimigosFactory());
+    for (let i = 0; i < NUMERO_INIMIGOS; i++) {
+        inimigos.push(inimigosFactory());
+    }
+}
+
+function resetGame() {
+    protagonista.reset();
+    pontuacao.reset();
+    inimigos.forEach(inimigo => {
+        inimigo.reset();
+    });
 }

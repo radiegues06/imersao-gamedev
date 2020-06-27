@@ -38,4 +38,9 @@ class Protagonista extends Personagem {
             inimigo.screen.x + toleranciaColisao * inimigo.screen.width / 2, inimigo.screen.y + toleranciaColisao * inimigo.screen.height / 2,
             (1 - toleranciaColisao) * inimigo.screen.width, (1 - toleranciaColisao) * inimigo.screen.height);
     }
+
+    reset() {
+        super.reset();
+        this.velocidade = 0;
+    }
 }

@@ -4,13 +4,13 @@ function setup() {
 }
 
 function draw() {
-    if (SCENE == 0) {
+    if (SCENE === 0) {
         telaInicial();
     }
-    if (SCENE == 1) {
+    if (SCENE === 1) {
         gameOn();
     }
-    if (SCENE == 2) {
+    if (SCENE === 2) {
         gameOver();
     }
 }
@@ -80,7 +80,7 @@ function keyPressed() {
         }
     } else if (SCENE == 2) {
         if (keyCode === 13 || keyCode === 32) {
-            createGame();
+            resetGame();
             SCENE = 1;
             loop();
         }

@@ -18,6 +18,7 @@ class Personagem {
             this.sprite.crop.width,
             this.sprite.crop.height);
         this.nextFrame();
+
     }
 
     nextFrame() {

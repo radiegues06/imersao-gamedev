@@ -53,7 +53,6 @@ function gameOver() {
 function telaInicial() {
 
     const padding = 15;
-
     image(telaInicialImage, 0, 0, windowWidth, windowHeight);
 
     textAlign(CENTER, CENTER);

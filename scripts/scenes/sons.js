@@ -19,14 +19,14 @@ class Sons {
     }
 
     playScene() {
-        if (SCENE === 0) {
+        if (SCENE === "telaInicial") {
             tryToPlay(this.intro);
         }
-        if (SCENE === 1) {
+        if (SCENE === "fase1") {
             tryToPlay(this.trilha);
             tryToPlay(this.andandoFloresta);
         }
-        if (SCENE === 2) {
+        if (SCENE === "gameOver") {
             tryToPlay(this.gameOver);
         }
     }

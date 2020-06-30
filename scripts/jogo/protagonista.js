@@ -30,7 +30,7 @@ class Protagonista {
         }
 
         this.velocidade = 0;
-        this.velocidadeDoPulo = -30;
+        this.velocidadeDoPulo = -25;
         this.pulos = 0;
     }
 
@@ -65,7 +65,7 @@ class Protagonista {
     }
 
     checarColisao(inimigo) {
-        const toleranciaColisao = 0.25;
+        const toleranciaColisao = 0.35;
 
         // noFill();
         // rect(this.screen.x + toleranciaColisao * this.screen.width / 2, this.screen.y + toleranciaColisao * this.screen.height / 2,

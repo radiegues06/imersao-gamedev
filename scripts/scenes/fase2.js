@@ -6,12 +6,12 @@ class Fase2 {
         this.backgroundImages[2] = new Fundo("assets/imagens/cenario/Middle_Decor.png", 5);
         this.backgroundImages[3] = new Fundo("assets/imagens/cenario/Foreground.png", 10);
         this.backgroundImages[4] = new Fundo("assets/imagens/cenario/Ground.png", 18);
-        this.frameRate = 40;
+        // this.frameRate = 40;
     }
 
     draw() {
-        this.frameRate += 0.01;
-        frameRate(this.frameRate);
+        // this.frameRate += 0.01;
+        // frameRate(this.frameRate);
 
         this.backgroundImages.forEach(element => element.drawFundo());
 

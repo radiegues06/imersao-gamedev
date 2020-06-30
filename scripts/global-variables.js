@@ -8,7 +8,7 @@ const MUTE = false;
 
 let FRAME_RATE = 30;
 let cenas;
-let SCENE = "telaInicial";
+let SCENE = "encerramento";
 
 const GRAVIDADE = 1.5;
 const DIREITA = 0.04 * window.innerWidth;
@@ -34,7 +34,8 @@ function preload() {
         fase1: new Fase1(),
         "achou-varinha": new AchouVarinha(),
         fase2: new Fase2(),
-        gameOver: new GameOver()
+        gameOver: new GameOver(),
+        encerramento: new Encerramento()
     }
     sons = new Sons();
 

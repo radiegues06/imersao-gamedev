@@ -23,7 +23,7 @@ class AchouVarinha {
 
         protagonista.screen.x = protagonista.screen.xInitial;
         protagonista.screen.y = protagonista.screen.yInitial;
-        protagonista.animacoes["achou-varinha"].animate();
+        protagonista.animacoes["poder"].animate();
     }
 
     key(keyCode) {

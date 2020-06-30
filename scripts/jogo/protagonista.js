@@ -1,7 +1,7 @@
 class Protagonista {
     constructor() {
 
-        this.screen = new Screen(windowHeight * 0.3, DIREITA, CHAO);
+        this.resetScreen();
 
         this.animacoes = {
             "fase1": {
@@ -32,6 +32,10 @@ class Protagonista {
         this.velocidade = 0;
         this.velocidadeDoPulo = -30;
         this.pulos = 0;
+    }
+
+    resetScreen() {
+        this.screen = new Screen(windowHeight * 0.3, DIREITA, CHAO);
     }
 
     pular() {

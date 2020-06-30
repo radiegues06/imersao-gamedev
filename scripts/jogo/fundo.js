@@ -21,7 +21,7 @@ class Fundo {
     }
 
     nascerEPorDoSol() {
-        if (pontuacao.pontos % 200 < 100) {
+        if (pontuacao.pontos % 250 < 125) {
             this.alpha -= 0.01;
         } else {
             this.alpha += 0.01;

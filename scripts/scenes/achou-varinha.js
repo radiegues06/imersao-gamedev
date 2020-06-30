@@ -29,6 +29,7 @@ class AchouVarinha {
     key(keyCode) {
         if (keyCode === 13) {
             SCENE = "fase2";
+            resetFrameRate();
         }
     }
 }

@@ -4,6 +4,8 @@ function setup() {
 }
 
 function draw() {
+    FRAME_RATE += 0.01;
+    frameRate(FRAME_RATE);
     cenas[SCENE].draw()
     sons.playScene();
 }

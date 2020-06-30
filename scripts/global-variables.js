@@ -6,7 +6,8 @@ let fonteJogo;
 let sons;
 const MUTE = false;
 
-let FRAME_RATE = 40;
+let FRAME_RATE_INICIAL = 40;
+let FRAME_RATE;
 let cenas;
 let SCENE = "telaInicial";
 
@@ -47,9 +48,16 @@ function preload() {
     for (let i = 0; i < NUMERO_INIMIGOS; i++) {
         inimigos.push(inimigosFactory());
     }
+
+    resetFrameRate();
+}
+
+function resetFrameRate() {
+    FRAME_RATE = FRAME_RATE_INICIAL;
 }
 
 function resetGame() {
+    resetFrameRate();
     protagonista.reset();
     pontuacao.reset();
     inimigos.forEach(inimigo => {

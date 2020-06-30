@@ -1,13 +1,13 @@
 class Pontuacao {
     constructor() {
         this.pontos = 0;
-        this.bonus = 10; //floor(300 / FRAME_RATE);
         this.bonusAtual = 0;
         this.showBonusCounter = 0;
         this.maximaPontuacao = 0;
     }
 
     atualizaPontuacao() {
+        this.bonus = floor(FRAME_RATE * 10 / FRAME_RATE_INICIAL);
         this.pontos += this.getPontuacaoPorTempo() + this.bonusAtual;
         this.showPontuacao();
     }
@@ -17,7 +17,7 @@ class Pontuacao {
     }
 
     getPontuacaoPorTempo() {
-        return 1 / FRAME_RATE;
+        return FRAME_RATE / FRAME_RATE_INICIAL / 30;
     }
 
     addBonus() {

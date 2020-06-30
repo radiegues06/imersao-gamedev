@@ -1,6 +1,6 @@
 let protagonista;
 let inimigos;
-const NUMERO_INIMIGOS = 2;
+const NUMERO_INIMIGOS = 20;
 
 let fonteJogo;
 let sons;
@@ -15,6 +15,8 @@ const DIREITA = 0.04 * window.innerWidth;
 const ESQUERDA = window.innerWidth;
 const CEU = 0.5 * window.innerHeight;
 const CHAO = 0.02 * window.innerHeight;
+
+let pontuacao;
 
 const SHADOW = 4;
 
@@ -36,7 +38,7 @@ function preload() {
 
     inimigos = [];
     for (let i = 0; i < NUMERO_INIMIGOS; i++) {
-        inimigos.push(inimigosFactory());
+        inimigos.push(inimigosFactory(2));
     }
 }
 

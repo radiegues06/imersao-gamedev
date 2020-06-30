@@ -3,6 +3,7 @@ class Fundo {
         this.img = loadImage(imagePath);
         this.speed = speed;
         this.setOriginalImagePositions();
+        this.alpha = 0;
     }
 
     setOriginalImagePositions() {
@@ -13,9 +14,27 @@ class Fundo {
     drawFundo() {
         image(this.img, this.pos1, 0, windowWidth, windowHeight);
         image(this.img, this.pos2, 0, windowWidth, windowHeight);
-        // fill("rgba(0,0,0,0.5)")
-        //rect(0, 0, windowWidth, windowHeight);
+
+        this.nascerEPorDoSol();
+
         this.moveImage();
+    }
+
+    nascerEPorDoSol() {
+        if (pontuacao.pontos % 200 < 100) {
+            this.alpha -= 0.01;
+        } else {
+            this.alpha += 0.01;
+        }
+        if (this.alpha < 0) {
+            this.alpha = 0;
+        }
+        if (this.alpha > 0.35) {
+            this.alpha = 0.35;
+        }
+
+        fill("rgba(0,0,0," + this.alpha + ")");
+        rect(0, 0, windowWidth, windowHeight);
     }
 
     moveImage() {

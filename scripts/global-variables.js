@@ -6,7 +6,7 @@ let fonteJogo;
 let sons;
 const MUTE = false;
 
-let FRAME_RATE = 30;
+let FRAME_RATE = 40;
 let cenas;
 let SCENE = "telaInicial";
 

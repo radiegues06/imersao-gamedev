@@ -65,7 +65,7 @@ class Protagonista {
     }
 
     checarColisao(inimigo) {
-        const toleranciaColisao = 0.35;
+        const toleranciaColisao = 0.4;
 
         // noFill();
         // rect(this.screen.x + toleranciaColisao * this.screen.width / 2, this.screen.y + toleranciaColisao * this.screen.height / 2,

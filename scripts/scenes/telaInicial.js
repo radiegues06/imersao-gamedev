@@ -26,6 +26,7 @@ class telaInicial {
         text('Aperte ENTER ou ESPAÇO para iniciar o jogo', windowWidth / 2, windowHeight * 0.9);
 
         fill(200, 200, 200);
+        textFont(fonteJogo);
         textAlign(RIGHT, BOTTOM);
         textSize(15);
         text("Desenvolvido por Rafael Amancio Diegues", windowWidth - padding, windowHeight - padding)

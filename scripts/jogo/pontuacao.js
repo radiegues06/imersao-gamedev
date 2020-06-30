@@ -1,7 +1,7 @@
 class Pontuacao {
     constructor() {
         this.pontos = 0;
-        this.bonus = floor(300 / FRAME_RATE);
+        this.bonus = 10; //floor(300 / FRAME_RATE);
         this.bonusAtual = 0;
         this.showBonusCounter = 0;
         this.maximaPontuacao = 0;

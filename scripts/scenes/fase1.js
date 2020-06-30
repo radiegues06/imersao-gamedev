@@ -33,7 +33,7 @@ class Fase1 {
 
         pontuacao.atualizaPontuacao();
 
-        if (pontuacao.pontos > 20) {
+        if (pontuacao.pontos > pontosFinal["fase1"]) {
             SCENE = "achou-varinha";
             sons.mudaScene();
         }

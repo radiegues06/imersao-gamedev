@@ -12,13 +12,17 @@ class telaInicial {
         fill(0, 0, 0);
         textSize(60);
         textFont(fonteJogo);
-        text('As aventuras de', windowWidth / 2, windowHeight * 0.3);
+        text('As aventuras de', windowWidth / 2, windowHeight * 0.25);
         textSize(100);
-        text('Hypsta', windowWidth / 2, windowHeight * 0.45);
+        text('Hypsta', windowWidth / 2, windowHeight * 0.4);
+
+        textSize(30);
+        text('Ajude a bruxinha a encontrar sua varinha perdida na floresta e voltar para casa.', windowWidth / 2, windowHeight * 0.6);
+        text('Use a seta para cima ou a barra de espaco para pular.', windowWidth / 2, windowHeight * 0.7);
 
         textFont('Helvetica');
         textSize(40);
-        text('Aperte ENTER ou ESPAÇO para iniciar o jogo', windowWidth / 2, windowHeight * 0.7);
+        text('Aperte ENTER ou ESPAÇO para iniciar o jogo', windowWidth / 2, windowHeight * 0.85);
 
         fill(200, 200, 200);
         textAlign(RIGHT, BOTTOM);

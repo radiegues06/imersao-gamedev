@@ -1,10 +1,10 @@
 let protagonista;
 let inimigos;
-const NUMERO_INIMIGOS = 20;
+const NUMERO_INIMIGOS = 2;
 
 let fonteJogo;
 let sons;
-const MUTE = true;
+const MUTE = false;
 
 let FRAME_RATE = 30;
 let cenas;
@@ -17,6 +17,10 @@ const CEU = 0.5 * window.innerHeight;
 const CHAO = 0.02 * window.innerHeight;
 
 let pontuacao;
+const pontosFinal = {
+    fase1: 50,
+    fase2: 100
+}
 
 const SHADOW = 4;
 

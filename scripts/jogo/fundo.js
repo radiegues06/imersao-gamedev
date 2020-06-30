@@ -29,8 +29,8 @@ class Fundo {
         if (this.alpha < 0) {
             this.alpha = 0;
         }
-        if (this.alpha > 0.35) {
-            this.alpha = 0.35;
+        if (this.alpha > 0.4) {
+            this.alpha = 0.4;
         }
 
         fill("rgba(0,0,0," + this.alpha + ")");

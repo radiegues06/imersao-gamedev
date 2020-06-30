@@ -86,7 +86,7 @@ Exemplo: `x = (x + 1) % max;`. A variável `x` terá valores de 0 a `max`.
 * É possível criar uma história usando as funções para adicionar HTML e CSS no Canvas
 
 - [ ] Criar histórias
-- [ ] Cenas intermediárias
+- [x] Cenas intermediárias
 - [x] Página de Game Over poder reiniciar o jogo
 - [x] Guardar maior pontuação
 

@@ -6,7 +6,7 @@ class Protagonista {
         this.animacoes = {
             "fase1": {
                 "correndo": new Personagem(
-                    new Sprite("assets/imagens/personagem/correndo2.png", 2400, 1920, 4, 5, 16, 120, 100, "direita"),
+                    new Sprite("assets/imagens/personagem/correndo2.png", 2400, 1920, 4, 5, 16, 100, 100, "direita"),
                     this.screen),
                 "pulando": new Personagem(
                     new Sprite("assets/imagens/personagem/pulando.png", 2400, 2400, 5, 5, undefined, 120, 40, "direita"),
@@ -14,17 +14,19 @@ class Protagonista {
             },
             "fase2": {
                 "correndo": new Personagem(
-                    new Sprite("assets/imagens/personagem/correndo-com-varinha.png", 2400, 1920, 4, 5, 16, 40, 100, "direita"),
+                    new Sprite("assets/imagens/personagem/correndo-com-varinha.png", 2400, 1920, 4, 5, 16, 52, 110, "direita"),
                     this.screen),
                 "pulando": new Personagem(
                     new Sprite("assets/imagens/personagem/pulando.png", 2400, 2400, 5, 5, undefined, 40, 10, "direita"),
                     this.screen)
             },
-            "final": {
-                "correndo": new Personagem(
-                    new Sprite("assets/imagens/personagem/carregando-poder.png", 2400, 1440, 3, 5, 14, 0, 0, "direita"),
-                    this.screen)
-            }
+            "achou-varinha": new Personagem(
+                new Sprite("assets/imagens/personagem/achou-varinha.png", 2400, 1440, 3, 5, 14, 0, 0, "direita"),
+                this.screen),
+            "poder": new Personagem(
+                new Sprite("assets/imagens/personagem/carregando-poder.png", 2400, 1440, 3, 5, 14, 0, 0, "direita"),
+                this.screen)
+
         }
 
         this.velocidade = 0;

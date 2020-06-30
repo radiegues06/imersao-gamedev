@@ -10,8 +10,13 @@ class GameOver {
 
     key(keyCode) {
         if (keyCode === 13 || keyCode === 32) {
+            if (pontuacao.pontos > 500) {
+                SCENE = "fase2";
+            } else {
+                SCENE = "fase1";
+            }
+
             resetGame();
-            SCENE = "fase1";
             sons.mudaScene();
             loop();
         }

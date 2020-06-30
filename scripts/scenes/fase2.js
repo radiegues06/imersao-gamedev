@@ -1,4 +1,4 @@
-class Fase1 {
+class Fase2 {
     constructor() {
         this.backgroundImages = [];
         this.backgroundImages[0] = new Fundo("assets/imagens/cenario/Sky.png", 0);
@@ -6,9 +6,12 @@ class Fase1 {
         this.backgroundImages[2] = new Fundo("assets/imagens/cenario/Middle_Decor.png", 5);
         this.backgroundImages[3] = new Fundo("assets/imagens/cenario/Foreground.png", 10);
         this.backgroundImages[4] = new Fundo("assets/imagens/cenario/Ground.png", 18);
+        this.frameRate = 40;
     }
 
     draw() {
+        this.frameRate += 0.01;
+        frameRate(this.frameRate);
 
         this.backgroundImages.forEach(element => element.drawFundo());
 
@@ -32,11 +35,6 @@ class Fase1 {
         })
 
         pontuacao.atualizaPontuacao();
-
-        if (pontuacao.pontos > 20) {
-            SCENE = "achou-varinha";
-            sons.mudaScene();
-        }
 
     }
 

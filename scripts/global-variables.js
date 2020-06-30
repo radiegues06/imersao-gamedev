@@ -28,6 +28,8 @@ function preload() {
     cenas = {
         telaInicial: new telaInicial(),
         fase1: new Fase1(),
+        "achou-varinha": new AchouVarinha(),
+        fase2: new Fase2(),
         gameOver: new GameOver()
     }
     sons = new Sons();

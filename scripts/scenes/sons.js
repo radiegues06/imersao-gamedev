@@ -1,6 +1,6 @@
 class Sons {
     constructor() {
-        this.intro = loadSound("assets/sons/intro.wav")
+        this.intro = loadSound("assets/sons/intro.wav");
 
         this.fase1 = loadSound("assets/sons/fase1-soundtrack.mp3");
         //this.fase2 = loadSound("assets/sons/fase2-soundtrack.flac");

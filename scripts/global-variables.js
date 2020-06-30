@@ -28,6 +28,7 @@ function preload() {
 
     fonteJogo = loadFont("assets/imagens/assets/fonteTelaInicial.otf");
 
+    sons = new Sons();
 
     cenas = {
         telaInicial: new telaInicial(),
@@ -37,7 +38,6 @@ function preload() {
         gameOver: new GameOver(),
         encerramento: new Encerramento()
     }
-    sons = new Sons();
 
     protagonista = new Protagonista();
 
@@ -55,4 +55,8 @@ function resetGame() {
     inimigos.forEach(inimigo => {
         inimigo.reset();
     });
+}
+
+function touchStarted() {
+    getAudioContext().resume();
 }

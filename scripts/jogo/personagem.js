@@ -31,7 +31,6 @@ class Personagem {
         }
     }
 
-
     reset() {
         this.screen.x = this.screen.xInitial;
         this.screen.y = this.screen.yInitial;

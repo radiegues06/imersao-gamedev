@@ -14,7 +14,7 @@ class Protagonista {
             },
             "fase2": {
                 "correndo": new Personagem(
-                    new Sprite("assets/imagens/personagem/correndo-com-varinha.png", 2400, 1920, 4, 5, 16, 52, 110, "direita"),
+                    new Sprite("assets/imagens/personagem/correndo-com-varinha.png", 2400, 1920, 4, 5, 16, 50, 110, "direita"),
                     this.screen),
                 "pulando": new Personagem(
                     new Sprite("assets/imagens/personagem/pulando.png", 2400, 2400, 5, 5, undefined, 40, 10, "direita"),

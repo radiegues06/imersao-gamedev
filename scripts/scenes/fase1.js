@@ -36,6 +36,8 @@ class Fase1 {
         if (pontuacao.pontos > pontosFinal["fase1"]) {
             SCENE = "achou-varinha";
             sons.mudaScene();
+            inimigos.forEach(inimigo => { inimigo.reset() });
+            protagonista.reset();
             tryToPlay(sons.faseConcluida);
         }
 

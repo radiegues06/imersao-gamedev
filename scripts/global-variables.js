@@ -1,10 +1,10 @@
 let protagonista;
 let inimigos;
-const NUMERO_INIMIGOS = 2;
+const NUMERO_INIMIGOS = 1;
 
 let fonteJogo;
 let sons;
-const MUTE = false;
+const MUTE = true;
 
 let FRAME_RATE = 30;
 let cenas;
@@ -45,7 +45,7 @@ function preload() {
 
     inimigos = [];
     for (let i = 0; i < NUMERO_INIMIGOS; i++) {
-        inimigos.push(inimigosFactory(2));
+        inimigos.push(inimigosFactory());
     }
 }
 

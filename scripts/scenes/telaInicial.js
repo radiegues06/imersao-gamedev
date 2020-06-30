@@ -17,7 +17,7 @@ class telaInicial {
         text('Hypsta', windowWidth / 2, windowHeight * 0.4);
 
         textSize(30);
-        text(`Ajude a bruxinha a encontrar sua varinha perdida na floresta e voltar para casa. \n Some ${pontosFinal.fase1} pontos para encontrar a varinha.`, windowWidth / 2, windowHeight * 0.6);
+        text(`Ajude a bruxinha a encontrar sua varinha perdida na floresta e voltar para casa. \n\n Some ${pontosFinal.fase1} pontos para encontrar a varinha.`, windowWidth / 2, windowHeight * 0.6);
 
         textFont('Helvetica');
         textSize(40);

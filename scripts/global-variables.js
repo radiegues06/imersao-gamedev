@@ -4,7 +4,7 @@ const NUMERO_INIMIGOS = 2;
 
 let fonteJogo;
 let sons;
-const MUTE = false;
+const MUTE = true;
 
 let FRAME_RATE = 30;
 let cenas;
@@ -30,10 +30,7 @@ function preload() {
     }
     sons = new Sons();
 
-    protagonista = new Protagonista(
-        new Sprite("assets/imagens/personagem/correndo.png", 880, 1080, 4, 4),
-        new Screen(0.5, DIREITA, CHAO)
-    );
+    protagonista = new Protagonista();
 
     pontuacao = new Pontuacao();
 

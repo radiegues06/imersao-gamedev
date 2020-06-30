@@ -13,6 +13,8 @@ class Fundo {
     drawFundo() {
         image(this.img, this.pos1, 0, windowWidth, windowHeight);
         image(this.img, this.pos2, 0, windowWidth, windowHeight);
+        // fill("rgba(0,0,0,0.5)")
+        //rect(0, 0, windowWidth, windowHeight);
         this.moveImage();
     }
 

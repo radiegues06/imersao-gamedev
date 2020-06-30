@@ -89,3 +89,9 @@ Exemplo: `x = (x + 1) % max;`. A variável `x` terá valores de 0 a `max`.
 - [ ] Cenas intermediárias
 - [x] Página de Game Over poder reiniciar o jogo
 - [x] Guardar maior pontuação
+
+# Aula 5
+
+* Classe de vidas do personagem
+
+## Tarefas

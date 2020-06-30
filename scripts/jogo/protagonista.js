@@ -1,6 +1,32 @@
-class Protagonista extends Personagem {
-    constructor(sprite, screen) {
-        super(sprite, screen);
+class Protagonista {
+    constructor() {
+
+        this.screen = new Screen(windowHeight * 0.3, DIREITA, CHAO);
+
+        this.animacoes = {
+            "fase1": {
+                "correndo": new Personagem(
+                    new Sprite("assets/imagens/personagem/correndo2.png", 2400, 1920, 4, 5, 16, 120, 100, "direita"),
+                    this.screen),
+                "pulando": new Personagem(
+                    new Sprite("assets/imagens/personagem/pulando.png", 2400, 2400, 5, 5, undefined, 120, 40, "direita"),
+                    this.screen)
+            },
+            "fase2": {
+                "correndo": new Personagem(
+                    new Sprite("assets/imagens/personagem/correndo-com-varinha.png", 2400, 1920, 4, 5, 16, 40, 100, "direita"),
+                    this.screen),
+                "pulando": new Personagem(
+                    new Sprite("assets/imagens/personagem/pulando.png", 2400, 2400, 5, 5, undefined, 40, 10, "direita"),
+                    this.screen)
+            },
+            "final": {
+                "correndo": new Personagem(
+                    new Sprite("assets/imagens/personagem/carregando-poder.png", 2400, 1440, 3, 5, 14, 0, 0, "direita"),
+                    this.screen)
+            }
+        }
+
         this.velocidade = 0;
         this.velocidadeDoPulo = -30;
         this.pulos = 0;
@@ -13,6 +39,14 @@ class Protagonista extends Personagem {
             sons.playPulo();
         }
 
+    }
+
+    animate() {
+        if (this.screen.y < this.screen.yInitial) {
+            this.animacoes[SCENE]["correndo"].animate(); // this.animacoes[SCENE]["pulando"].animate();
+        } else {
+            this.animacoes[SCENE]["correndo"].animate();
+        }
     }
 
     aplicarGravidade() {
@@ -40,7 +74,8 @@ class Protagonista extends Personagem {
     }
 
     reset() {
-        super.reset();
+        this.screen.x = this.screen.xInitial;
+        this.screen.y = this.screen.yInitial;
         this.velocidade = 0;
     }
 }

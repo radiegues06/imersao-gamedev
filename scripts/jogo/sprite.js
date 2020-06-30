@@ -1,6 +1,6 @@
 class Sprite {
     constructor(imagePath, width, height, nRow, nColumn,
-        totalFrames = nRow * nColumn, horizontalCrop = 0, verticalCrop = 0) {
+        totalFrames = nRow * nColumn, horizontalCrop = 0, verticalCrop = 0, direcao = "esquerda") {
 
         this.image = loadImage(imagePath);
         this.nRow = nRow;
@@ -12,6 +12,7 @@ class Sprite {
         this.row = 0;
         this.horizontalCrop = horizontalCrop;
         this.verticalCrop = verticalCrop;
+        this.direcao = direcao;
         this.cell = {
             width: width / nColumn,
             height: height / nRow

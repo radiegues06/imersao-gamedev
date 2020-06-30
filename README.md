@@ -27,6 +27,7 @@ Desenvolver um jogo 2D da categoria *endless runner game*, inspirado em um visua
 * JavaScript
 * [p5.js](https://p5js.org/)
 * Editor de texto: [Visual Studio Code](https://code.visualstudio.com/)
+* Sprites desenvolvidos por [pipoya](https://pipoya.itch.io/pipoya-free-2d-game-character-sprites)
 
 ## Exemplos de Jogos
 

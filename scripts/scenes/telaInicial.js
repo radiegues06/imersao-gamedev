@@ -17,12 +17,13 @@ class telaInicial {
         text('Hypsta', windowWidth / 2, windowHeight * 0.4);
 
         textSize(30);
-        text('Ajude a bruxinha a encontrar sua varinha perdida na floresta e voltar para casa.', windowWidth / 2, windowHeight * 0.6);
-        text('Use a seta para cima ou a barra de espaco para pular.', windowWidth / 2, windowHeight * 0.7);
+        text(`Ajude a bruxinha a encontrar sua varinha perdida na floresta e voltar para casa. \n Some ${pontosFinal.fase1} pontos para encontrar a varinha.`, windowWidth / 2, windowHeight * 0.6);
 
         textFont('Helvetica');
         textSize(40);
-        text('Aperte ENTER ou ESPAÇO para iniciar o jogo', windowWidth / 2, windowHeight * 0.85);
+        text('Use a seta para cima ou a barra de espaço para pular.', windowWidth / 2, windowHeight * 0.8);
+        textSize(30);
+        text('Aperte ENTER ou ESPAÇO para iniciar o jogo', windowWidth / 2, windowHeight * 0.9);
 
         fill(200, 200, 200);
         textAlign(RIGHT, BOTTOM);

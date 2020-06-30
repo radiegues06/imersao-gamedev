@@ -8,7 +8,7 @@ const MUTE = false;
 
 let FRAME_RATE = 30;
 let cenas;
-let SCENE = "encerramento";
+let SCENE = "telaInicial";
 
 const GRAVIDADE = 1.5;
 const DIREITA = 0.04 * window.innerWidth;

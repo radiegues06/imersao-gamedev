@@ -36,6 +36,12 @@ class Fase2 {
 
         pontuacao.atualizaPontuacao();
 
+        if (pontuacao.pontos > pontosFinal["fase2"]) {
+            SCENE = "encerramento";
+            sons.mudaScene();
+            tryToPlay(sons.winGame);
+        }
+
     }
 
     key(keyCode) {

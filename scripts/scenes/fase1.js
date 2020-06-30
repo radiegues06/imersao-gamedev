@@ -36,6 +36,7 @@ class Fase1 {
         if (pontuacao.pontos > pontosFinal["fase1"]) {
             SCENE = "achou-varinha";
             sons.mudaScene();
+            tryToPlay(sons.faseConcluida);
         }
 
     }
